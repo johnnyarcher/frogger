@@ -61,8 +61,9 @@ Player.prototype.handleInput = function(key) {
 /******* ALL ENEMIES ********/
 
 var allEnemies = [
-    new Enemy(0,0,100),
-    new Enemy(100,100,200)
+    new Enemy(100,100,200),
+    new Enemy(200,200,300),
+    
 ];
 
 // Now write your own player class
