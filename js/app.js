@@ -44,16 +44,16 @@ var Player = function(x, y, speed) {
 /******* ALL ENEMIES ********/
 
 var allEnemies = [
-    new Enemy(0,0,100)
+    new Enemy(0,0,100),
+    new Enemy(100,100,200)
 ];
-
-
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 
 
+var player = new Player(200, 400, 100);
 
 
 
