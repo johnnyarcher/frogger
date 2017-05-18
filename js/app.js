@@ -1,5 +1,7 @@
 /******* ENEMIES ********/
 
+var CANVAS_WIDTH = 550;
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     this.x = x;
@@ -15,7 +17,7 @@ Enemy.prototype.update = function(dt) {
 
 Enemy.prototype.updatePosition = function(dt) {
     this.x += this.speed * dt;
-    if (this.x >= canvas.width) {
+    if (this.x >= CANVAS_WIDTH) {
         this.x = 0;    
     }
 };
@@ -37,8 +39,23 @@ var Player = function(x, y, speed) {
     this.x = x;
     this.y = y;
     this.speed = speed;
-    this.sprite = 'images/char-pink-girl.png';
+    this.sprite = "images/char-boy.png";
+    this.lastKey = null;
+};
 
+
+Player.prototype.update = function() {
+    
+};
+
+
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+
+Player.prototype.handleInput = function(key) {
+    this.lastKey = key;
 };
 
 /******* ALL ENEMIES ********/
@@ -54,25 +71,6 @@ var allEnemies = [
 
 
 var player = new Player(200, 400, 100);
-
-Player.prototype.update = function() {
-    
-
-};
-
-
-
-Player.prototype.render = function() {
-
-
-};
-
-
-Player.prototype.handleInput = function() {
-
-
-};
-
 
 
 // Now instantiate your objects.
