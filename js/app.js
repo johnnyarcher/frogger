@@ -13,9 +13,9 @@ Enemy.prototype.update = function(dt) {
 };
 
 
-Enemy.prototype.updatePositon = function(dt) {
+Enemy.prototype.updatePosition = function(dt) {
     this.x += this.speed * dt;
-    if (this.x >= $("canvas").width()) {
+    if (this.x >= canvas.width) {
         this.x = 0;    
     }
 };
