@@ -13,19 +13,33 @@ Enemy.prototype.update = function(dt) {
 
 Enemy.prototype.updatePositon = function(dt) {
     this.x += this.speed * dt;
-    //TO DO: Define Update Positon
+    if (this.x >= $("canvas").width()) {
+        this.x = 0;    
+    }
 };
-
 
 Enemy.prototype.detectCollision = function() {
     //TO DO: Define Detect Collision 
 
 };
 
-// Draw the enemy on the screen, required method for game
+
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+
+
+var Player = function(x, y, speed) {
+    this.x = x;
+    this.y = y;
+    this.speed = speed;
+    this.sprite = 'images/char-pink-girl.png';
+
+};
+
+
+
+
 
 // Now write your own player class
 // This class requires an update(), render() and
