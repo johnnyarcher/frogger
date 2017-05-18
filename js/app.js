@@ -1,3 +1,5 @@
+/******* ENEMIES ********/
+
 // Enemies our player must avoid
 var Enemy = function(x, y, speed) {
     this.x = x;
@@ -28,6 +30,8 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+/******* PLAYER ********/
+
 
 var Player = function(x, y, speed) {
     this.x = x;
@@ -37,13 +41,27 @@ var Player = function(x, y, speed) {
 
 };
 
+/******* ALL ENEMIES ********/
 
+var allEnemies = [
+    new Enemy(0,0,100)
+];
 
 
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+
+
+
+
+
+
+
+
+
+
 
 
 // Now instantiate your objects.
