@@ -55,12 +55,23 @@ var allEnemies = [
 
 var player = new Player(200, 400, 100);
 
+Player.prototype.update = function() {
+    
+
+};
 
 
 
+Player.prototype.render = function() {
 
 
+};
 
+
+Player.prototype.handleInput = function() {
+
+
+};
 
 
 
